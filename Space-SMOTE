@@ -6,7 +6,7 @@ warnings.filterwarnings("ignore")
 
 
 class Space_SMOTE:
-    def __init__(self, k=5, sampling_strategy=1, random_state=None,kmin=2,kmax=5):
+    def __init__(self, k=5, sampling_strategy=1, random_state=None,kmin=3,kmax=5):
         self.k = k
         self.kmin = int(kmin)
         self.kmax = int(kmax)
@@ -25,7 +25,7 @@ class Space_SMOTE:
         x_min_mm = x_train_mm[y_train == 1]
 
         # Generating middle samples
-        nb_min = NearestNeighbors(n_neighbors=self.k + 1, algorithm='ball_tree').fit(x_min_mm)  # 近邻正样本信息
+        nb_min = NearestNeighbors(n_neighbors=self.k + 1, algorithm='ball_tree').fit(x_min_mm)  
         dises_min, indexes_min = nb_min.kneighbors(x_min_mm)
 
         x_min = x_train[y_train == 1]
@@ -47,7 +47,7 @@ class Space_SMOTE:
         x_sample = np.delete(x_sample, 0, axis=0)
         # Get the index of the nearest neighbor samples
         sample_x_mm = min_max_scaler.transform(x_sample)
-        nb_all = NearestNeighbors(n_neighbors=self.k, algorithm='ball_tree').fit(x_train_mm)  # 全局近邻信息
+        nb_all = NearestNeighbors(n_neighbors=self.k, algorithm='ball_tree').fit(x_train_mm)  
         dises_sample, indexes_sample = nb_all.kneighbors(sample_x_mm)
 
         knn_mins = []
@@ -67,7 +67,7 @@ class Space_SMOTE:
         for gen_i in range(generate_num):
             if gen_msg.shape[0] == 0:
                 break
-            msg_t = gen_msg[np.random.choice(gen_msg.shape[0])]    # 随机选择一条生成线生成新样本
+            msg_t = gen_msg[np.random.choice(gen_msg.shape[0])]    
             x1 = x_min[msg_t[0].astype(int)]
             x2 = x_min[msg_t[1].astype(int)]
             x_new = x1 + np.random.uniform(0, 1) * (x2 - x1)
