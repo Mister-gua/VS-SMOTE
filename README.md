@@ -119,10 +119,10 @@ pip install -r requirements.txt			##暂时还不存在这个文件
 ### Example
 
 ```python
-from space_smote import SpaceSMOTE
+from space_smote import VS-SMOTE
 
 # Initialize with parameters
-smoter = SpaceSMOTE(k=5, kmin=3, kmax=5)
+smoter = VS-SMOTE(k=5, kmin=3, kmax=5)
 X_resampled, y_resampled = smoter.fit_resample(X, y)
 ```
 
