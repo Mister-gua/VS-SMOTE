@@ -1,12 +1,12 @@
-# Space-SMOTE: Synthetic Sample Generation in High-Value Spaces
+# VS-SMOTE: Leveraging high-value spaces to balance noise control and data diversity for class-imbalanced learning
 
- To address the issue of low-quality samples introduced by SMOTE and its improvements, we propose a new method called Space-SMOTE. Space-SMOTE treats the region containing the synthesized samples as multiple elongated subspaces and uses the middle samples to determine their spatial quality levels. Subsequently, depending on the spatial quality level, it first selects safe spaces and then selects high-value spaces among the safe spaces. By generating high-value spaces, Space-SMOTE can balance noise control and data-mining tasks.![fig1](C:\Users\JC\Documents\WeChat Files\wxid_a32zwhpc0q7522\FileStorage\File\2025-02\论文用图\论文用图\PNG\fig1.png)
+ To address the issue of low-quality samples introduced by SMOTE and its improvements, we propose a new method called VS-SMOTE. VS-SMOTE treats the region containing the synthesized samples as multiple elongated subspaces and uses the middle samples to determine their spatial quality levels. Subsequently, depending on the spatial quality level, it first selects safe spaces and then selects high-value spaces among the safe spaces. By generating high-value spaces, Space-SMOTE can balance noise control and data-mining tasks.![fig1](C:\Users\JC\Documents\WeChat Files\wxid_a32zwhpc0q7522\FileStorage\File\2025-02\论文用图\论文用图\PNG\fig1.png)
 
-*Figure 1: Comparison of space views between Borderline-SMOTE and Space-SMOTE.*
+*Figure 1: Comparison of space views between Borderline-SMOTE and VS-SMOTE.*
 
 ## Algorithm Introduction
 
-**Space-SMOTE** is a novel oversampling method designed to address class imbalance in machine learning. Unlike traditional SMOTE and its variants, Space-SMOTE focuses on generating synthetic samples in **high-value spaces** while avoiding noise. Key innovations include:
+**VS-SMOTE** is a novel oversampling method designed to address class imbalance in machine learning. Unlike traditional SMOTE and its variants, VS-SMOTE focuses on generating synthetic samples in **high-value spaces** while avoiding noise. Key innovations include:
 
 1. **Subspace Evaluation**:  
    The synthetic sample space is divided into multiple independent subspaces (long strips), each evaluated for quality using **middle samples** (Fig. 2). ![fig2](C:\Users\JC\Documents\WeChat Files\wxid_a32zwhpc0q7522\FileStorage\File\2025-02\论文用图\论文用图\PNG\fig2.png)*Figure 2: Middle samples assess spatial quality in majority-dominated regions.*
@@ -112,7 +112,7 @@ Space-SMOTE outperformed 9 state-of-the-art methods (e.g., SMOTE, Borderline-SMO
 ### Installation
 
 ```bash
-git clone https://github.com/xxxxxx/Space-SMOTE
+git clone https://github.com/xxxxxx/VS-SMOTE
 pip install -r requirements.txt			##暂时还不存在这个文件
 ```
 
