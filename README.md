@@ -1,6 +1,6 @@
 # VS-SMOTE: Leveraging high-value spaces to balance noise control and data diversity for class-imbalanced learning
 
- To address the issue of low-quality samples introduced by SMOTE and its improvements, we propose a new method called VS-SMOTE. VS-SMOTE treats the region containing the synthesized samples as multiple elongated subspaces and uses the middle samples to determine their spatial quality levels. Subsequently, depending on the spatial quality level, it first selects safe spaces and then selects high-value spaces among the safe spaces. By generating high-value spaces, Space-SMOTE can balance noise control and data-mining tasks.![fig1](C:\Users\JC\Documents\WeChat Files\wxid_a32zwhpc0q7522\FileStorage\File\2025-02\论文用图\论文用图\PNG\fig1.png)
+ To address the issue of low-quality samples introduced by SMOTE and its improvements, we propose a new method called VS-SMOTE. VS-SMOTE treats the region containing the synthesized samples as multiple elongated subspaces and uses the middle samples to determine their spatial quality levels. Subsequently, depending on the spatial quality level, it first selects safe spaces and then selects high-value spaces among the safe spaces. By generating high-value spaces, VS-SMOTE can balance noise control and data-mining tasks.![fig1](C:\Users\JC\Documents\WeChat Files\wxid_a32zwhpc0q7522\FileStorage\File\2025-02\论文用图\论文用图\PNG\fig1.png)
 
 *Figure 1: Comparison of space views between Borderline-SMOTE and VS-SMOTE.*
 
