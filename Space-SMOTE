@@ -5,7 +5,7 @@ from sklearn import preprocessing
 warnings.filterwarnings("ignore")
 
 
-class Space_SMOTE:
+class VS_SMOTE:
     def __init__(self, k=5, sampling_strategy=1, random_state=None,kmin=3,kmax=5):
         self.k = k
         self.kmin = int(kmin)
